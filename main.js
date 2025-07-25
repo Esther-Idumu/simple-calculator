@@ -1,7 +1,12 @@
 let display = document.getElementById("display");
 
+function playAudio(){
+    const audio = new Audio('click.mp3');
+    audio.play();
+}
+
 function appendToDisplay(value){
-    if(display.value === "Syntax Error"){
+    if(display.value === "Syntax Error" || display.value === "undefined"){
         display.value = ''
     }
     display.value += value;
